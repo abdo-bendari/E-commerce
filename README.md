@@ -6,10 +6,24 @@ The project's objective is to simplify the online shopping journey while providi
 
 ## Features
 
- * Filter option to get the required job.
- * Handles the user’s data.
- * Handles the company’s data.
- * Handles the Job Applications
+ * User-Friendly Interface: Designed with an intuitive layout for easy navigation, enabling users to find products quickly.
+ * Product Categories and Subcategories: Organized structure allowing users to browse products by category and subcategory for a more streamlined shopping experience.
+ * Brand Listings: Users can explore products from various brands, enhancing their choice and flexibility.
+ * Comprehensive Product Management: Admins can add, update, and remove products, ensuring that the inventory is always up-to-date.
+ * Flexible Shopping Cart: Add, remove, and update product quantities in the cart.
+Save items for later in a Wishlist, allowing users to easily access products they are interested in without adding them to the cart.
+Order Management: Users can view their order history and track the status of their current orders.
+ * Coupon System: Users can apply discount coupons at checkout for additional savings.
+ * Secure User Authentication:
+ * Sign In and Sign Up: Easy registration and login process for users
+ * 
+ *
+ * 
+ *
+ *
+ *
+ *
+ 
 ## Useing  
 
  * JavaScript
