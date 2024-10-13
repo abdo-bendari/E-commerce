@@ -69,18 +69,26 @@ $ npm i nodemon
 $ npm i slugify
 $ npm i stripe
 $ npm i uuid
-
 ```
 
 ### Collections
 
-* User Collection
-* Company Collection
-* Job Collection
-* Application Collection
-## User APIs
+* User
+* Category
+* Subcategory
+* Brand
+* Product
+* Order
+* Cart
+* Coupon
+* Review
 
-1. Sign Up
+## API Endpoints
+* User APIs : 
+
+1. `POST /users`
+
+
 2. Sign In
     - Sign In using  (email or recoveryEmail or mobileNumber)  and password
 3. update account.
