@@ -53,7 +53,7 @@ The project's objective is to simplify the online shopping journey while providi
 
 
 
-### Npm Modules 
+## Npm Modules 
 
 ```
 $ npm i bcrypt
@@ -71,7 +71,7 @@ $ npm i stripe
 $ npm i uuid
 ```
 
-### Collections
+## Collections
 
 * User
 * Category
@@ -83,17 +83,16 @@ $ npm i uuid
 * Coupon
 * Review
 
-### API Endpoints
-## User APIs : 
+## API Endpoints
+### User APIs : 
 
 1. `POST /users` : Add a new user. This route includes middleware to check for email duplication and validate the input based on the provided schema.
 2. `GET /users` : Retrieve all users.
 3. `GET /users/:name : Retrieve a user by their name.
 4. `PUT /users/:id` : Update a user's details by their ID.
-5. `DELETE /users/:id : Delete a user by their ID.
+5. `DELETE /users/:id` : Delete a user by their ID.
 
-
-## Category APIs
+### Category APIs
 
 1. `POST /categories` : Add a new category. Requires authentication and allows file upload for the category image.
 2. `GET /categories` : Retrieve all categories.
@@ -101,29 +100,74 @@ $ npm i uuid
 4. `PUT /categories/` : Update a category's details by its ID. Requires authentication and allows file upload for the category image.
 5. `DELETE /categories/` : Delete a category by its ID. Requires authentication.
 
+### Product APIs
 
-##  APIs
+1. `POST /products` : Add a new product. Requires authentication, allows file uploads for the cover image and multiple images, and validates the input based on the provided schema.
+2. `GET /products` : Retrieve all categories.
+3. `GET /products/` : Retrieve a category by its name.
+4. `PUT /products/` : Update a product's details by its ID. Requires authentication and allows file uploads for the cover image and multiple images.
+5. `DELETE /products/` : Delete a category by its ID. Requires authentication.
 
-1. Add Job 
-2. Update Job
-    - authorized with the role ( Company_HR )
-3. Delete Job
-    - authorized with the role ( Company_HR )
-4. Get all Jobs with their company’s information.
-5. Get all Jobs for a specific company.
-    - send the company name in the query and get this company jobs.
-6. Get all Jobs that match the following filters 
-    - filter with workingTime , jobLocation , seniorityLevel and jobTitle,technicalSkills
-    - one or more of them should applied   
-7. Apply to Job
-    - This API will add a new document in the application Collections with the new data
-    - authorized with the role ( User )
+### Auth APIs
+
+1. `POST /auth/signUp` : Register a new user. Includes middleware to check for email duplication and validates the input based on the provided schema.
+2. `POST /auth/signIn` :  Authenticate a user and log them in.
+3. `PATCH /auth` :  Change the user's password. Requires authentication.
+
+### Cart APIS
+
+1. `POST /cart` : Add an item to the user's cart. Requires authentication and authorization as a user.
+2. `PUT /cart/` : Update the quantity of an item in the cart by its ID. Requires authentication and authorization as a user.
+3. `DELETE /cart/` : Remove an item from the cart by its ID. Requires authentication and authorization as a user.
+4. `GET /cart` : Retrieve the logged-in user's cart. Requires authentication and authorization as a user.
+5. `POST /cart/coupon` : Apply a coupon to the user's cart. Requires authentication and authorization as a user.
+
+### Coupon APIS
+
+1. `POST /coupons` : Add a new coupon. Requires authentication and authorization as an admin.
+2. `GET /coupons` : Retrieve all coupons. Requires authentication and authorization as an admin.
+3. `GET /coupons/` : Retrieve a coupon by its ID. Requires authentication and authorization as an admin.
+4. `PUT /coupons/` : Update a coupon by its ID. Requires authentication and authorization as an admin.
+5. `DELETE /coupons/` : Delete a coupon by its ID. Requires authentication and authorization as an admin.
+
+### Review APIS
+
+1. `POST /reviews` : Add a new review. Requires authentication and authorization as a user.
+2. `GET /reviews` : Retrieve all reviews.
+3. `GET /reviews/` : Retrieve a review by its ID.
+4. `PUT /reviews/` : Update a review by its ID. Requires authentication and authorization as a user.
+5. `DELETE /reviews/` : Delete a review by its ID. Requires authentication and authorization as an admin or user.
+
+### Wishlist APIS
+
+1. `PATCH /wishlist` : Add an item to the user's wishlist. Requires authentication and authorization as a user.
+2. `GET /wishlist` : Retrieve the logged-in user's wishlist. Requires authentication and authorization as a user.
+3. `DELETE /wishlist/` : Remove an item from the wishlist by its ID. Requires authentication and authorization as a user or admin. 
+
+### Address APIS
+
+1. `PATCH /addresses` : Add a new address for the user. Requires authentication and authorization as a user.
+2. `GET /addresses` : Retrieve all addresses associated with the logged-in user. Requires authentication and authorization as a user.
+3. `DELETE /addresses/` : Remove an address by its ID. Requires authentication and authorization as a user or admin.
+
+### Order APIS
+
+1. `POST /orders/` : Create a cash order by item ID. Requires authentication and authorization as a user.
+2. `GET /orders/userOrders` : Retrieve all orders associated with the logged-in user. Requires authentication and authorization as a user or admin.
+3. `GET /orders/all` : Retrieve all orders. Requires authentication and authorization as an admin.
+4. `POST /orders/checkout/` : Create a checkout session for an order by item ID. Requires authentication and authorization as a user.
 
 #### Note: The APIs for subcategories and brands are structured similarly to the categories API, allowing for consistent functionality and streamlined development.
 
 
-## Additional Documentation and Acknowledgments
+## Deployment
 
-* Project folder on server:
-* Confluence link:
-* etc...
+* MongoDB Atlas: Use MongoDB Atlas for a managed cloud database.
+* Vercel: Deploy the application on Vercel for easy hosting and management.
+
+## Project Inspiration
+
+The idea for this eCommerce application was inspired by the Noon website. Analyzing its features and components helped shape the design and functionality of this project. The goal is to provide users with a seamless shopping experience, similar to that of established eCommerce platforms, while incorporating essential features like product categories, user authentication, and payment integration.
+
+
+
