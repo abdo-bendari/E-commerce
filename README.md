@@ -31,10 +31,28 @@ The project's objective is to simplify the online shopping journey while providi
  
 ## Useing  
 
- * JavaScript
- * Express.js
- * DB ( MongoDB )
- * ORM Mongoose
+ * JavaScript.
+ * Express.js.
+ * DB ( MongoDB ).
+ * ORM Mongoose.
+ * Stripe: Payment gateway integrated for secure online payments.
+ * User Authentication: JWT-based authentication.
+ * Authorization: Role-based access control for both users and admins.
+ * File Upload: Using Multer.
+ * bcrypt.
+ * Email Services: Integrated with Nodemailer for sending confirmation emails.
+ * Payment Handling: Secure online payment integration with Stripe (supports webhook for payment events).
+ * API Validation: Using Joi for validating API inputs.
+ * dotenv.
+ * Cors: Enabled for secure handling of API requests.
+ * Slug Generation: Product slugs generated using Slugify for SEO-friendly URLs.
+
+
+
+
+
+
+
 ### Npm Modules 
 
 ```
