@@ -56,17 +56,20 @@ The project's objective is to simplify the online shopping journey while providi
 ### Npm Modules 
 
 ```
+$ npm i bcrypt
+$ npm i cors
+$ npm i dotenv
 $ npm i express
 $ npm i joi
+$ npm i jsdoc
 $ npm i jsonwebtoken
 $ npm i mongoose
 $ npm i multer
-$ npm i nanoid
 $ npm i nodemon
-$ npm i nodemailer
-$ npm i uuidv4
-$ npm i cors
-$ npm i bcrypt
+$ npm i slugify
+$ npm i stripe
+$ npm i uuid
+
 ```
 
 ### Collections
