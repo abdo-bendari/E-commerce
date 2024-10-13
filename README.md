@@ -11,18 +11,23 @@ The project's objective is to simplify the online shopping journey while providi
  * Brand Listings: Users can explore products from various brands, enhancing their choice and flexibility.
  * Comprehensive Product Management: Admins can add, update, and remove products, ensuring that the inventory is always up-to-date.
  * Flexible Shopping Cart: Add, remove, and update product quantities in the cart.
-Save items for later in a Wishlist, allowing users to easily access products they are interested in without adding them to the cart.
-Order Management: Users can view their order history and track the status of their current orders.
+   Save items for later in a Wishlist, allowing users to easily access products they are interested in without adding them to the cart.
+   Order Management: Users can view their order history and track the status of their current orders.
  * Coupon System: Users can apply discount coupons at checkout for additional savings.
- * Secure User Authentication:
  * Sign In and Sign Up: Easy registration and login process for users
- * 
- *
- * 
- *
- *
- *
- *
+ * Email Confirmation: Users receive email verification to confirm their accounts.
+ * Change Password: Users can change their passwords securely.
+ * JWT Authentication: Ensures secure user authentication and authorization for accessing protected routes based on user roles (user and admin).
+ * API Features : such as pagination, search, select fields and sort
+ * Advanced Search and Filtering: Users can search for products and apply filters to find specific items based on criteria such as price, brand, and category.
+ * File Uploads with Multer: Users can upload product images and other files easily through the application.
+ * Payment Integration with Stripe: Secure payment processing for credit card transactions
+ * Webhook functionality for handling payment events.
+ * User Reviews: Customers can leave reviews and ratings for products, helping others make informed decisions.
+ * Address Management: Users can save and manage multiple shipping addresses for a quicker checkout process.
+ * Pagination: Efficiently displays products across multiple pages, improving load times and user experience.
+ * Admin Dashboard: A comprehensive interface for admins to manage users, orders, products, and view analytics.
+
  
 ## Useing  
 
