@@ -26,6 +26,7 @@ The project's objective is to simplify the online shopping journey while providi
  * User Reviews: Customers can leave reviews and ratings for products, helping others make informed decisions.
  * Address Management: Users can save and manage multiple shipping addresses for a quicker checkout process.
  * Pagination: Efficiently displays products across multiple pages, improving load times and user experience.
+ * Apply MergeParams.
  * Admin Dashboard: A comprehensive interface for admins to manage users, orders, products, and view analytics.
 
  
@@ -46,7 +47,6 @@ The project's objective is to simplify the online shopping journey while providi
  * dotenv.
  * Cors: Enabled for secure handling of API requests.
  * Slug Generation: Product slugs generated using Slugify for SEO-friendly URLs.
-
 
 
 
@@ -83,50 +83,26 @@ $ npm i uuid
 * Coupon
 * Review
 
-## API Endpoints
-* User APIs : 
+### API Endpoints
+## User APIs : 
 
-1. `POST /users`
-
-
-2. Sign In
-    - Sign In using  (email or recoveryEmail or mobileNumber)  and password
-3. update account.
-    - you can update ( email , mobileNumber , recoveryEmail , DOB , lastName , firstName)
-    - if user update the email , mobileNumber the new data doesn’t conflict with any existing data in database
-    - only the owner of the account can update his account data
-4. Delete account
-    - only the owner of the account can delete his account data
-    - User must be loggedIn
-5. Get user account data 
-    - only the owner of the account can get his account data
-    - User must be loggedIn
-6. Get profile data for another user 
-    - send the userId in params or query
-7. Update password 
-8. Forget password 
-9. Get all accounts associated to a specific recovery Email
-
-## Company APIs
-
-1. Add company 
-    - Only ( Company_HR ) role
-2. Update company data
-    - only the company owner can update the data
-3. Delete company data
-    - only the company owner can delete the data
-    -  authorized with role ( Company_HR)
-4. Get company data 
-    - send the companyId in params to get the desired company data
-    - authorized with role ( Company_HR)
-5. Search for a company with a name. 
-    - authorized with the role ( Company_HR and User)
-6. Get all applications for specific Job
-    - each company Owner can take a look at the applications for his jobs only, he has no access to other companies’ application
-    - authorized with role (  Company_HR )
+1. `POST /users` : Add a new user. This route includes middleware to check for email duplication and validate the input based on the provided schema.
+2. `GET /users` : Retrieve all users.
+3. `GET /users/:name : Retrieve a user by their name.
+4. `PUT /users/:id` : Update a user's details by their ID.
+5. `DELETE /users/:id : Delete a user by their ID.
 
 
-## Jobs APIs
+## Category APIs
+
+1. `POST /categories` : Add a new category. Requires authentication and allows file upload for the category image.
+2. `GET /categories` : Retrieve all categories.
+3. `GET /categories/` : Retrieve a category by its name.
+4. `PUT /categories/` : Update a category's details by its ID. Requires authentication and allows file upload for the category image.
+5. `DELETE /categories/` : Delete a category by its ID. Requires authentication.
+
+
+##  APIs
 
 1. Add Job 
 2. Update Job
@@ -142,6 +118,8 @@ $ npm i uuid
 7. Apply to Job
     - This API will add a new document in the application Collections with the new data
     - authorized with the role ( User )
+
+#### Note: The APIs for subcategories and brands are structured similarly to the categories API, allowing for consistent functionality and streamlined development.
 
 
 ## Additional Documentation and Acknowledgments
