@@ -30,7 +30,7 @@ The project's objective is to simplify the online shopping journey while providi
  * Admin Dashboard: A comprehensive interface for admins to manage users, orders, products, and view analytics.
 
  
-## Useing  
+## Using  
 
  * JavaScript.
  * Express.js.
